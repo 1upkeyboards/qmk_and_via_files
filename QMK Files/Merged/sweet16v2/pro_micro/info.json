@@ -3,9 +3,8 @@
     "keyboard_name": "sweet16v2",
     "url": "1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-v2-macropad-kit/",
     "maintainer": "ziptyze",
-    "processor": "RP2040",
-    "bootloader": "rp2040",
-    "board": "GENERIC_RP_RP2040",
+    "bootloader": "atmel-dfu",
+    "processor": "atmega32u4",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x5518",
@@ -18,7 +17,6 @@
         "command": false,
         "console": false,
         "encoder": true,
-        "encoder_map": true,
         "extrakey": true,
         "mousekey": true,
         "nkro": false,
@@ -26,27 +24,20 @@
         "rgblight": false
     },
     "matrix_pins": {
-        "cols": ["GP2",  "GP9", "GP8",  "GP7"],
-        "rows": ["GP26", "GP1", "GP18", "GP5"]
-    },
-    "matrix_size": {
-        "cols": 4,
-        "rows": 4
-    },
-    "mouse_key": {
-        "enabled": true
+        "cols": ["F7", "D2", "B1", "C6"],
+        "rows": ["D1", "B5", "B4", "E6"]
     },
     "diode_direction": "COL2ROW",
     "encoder": {
         "enabled": true,
         "rotary": [
             {
-                "pin_a": "GP27",
-                "pin_b": "GP28"
+                "pin_a": "F6",
+                "pin_b": "F5"
             },
             {
-                "pin_a": "GP4",
-                "pin_b": "GP3"
+                "pin_a": "D4",
+                "pin_b": "D0"
             }
         ]
     },
@@ -75,9 +66,11 @@
             { "flags": 4, "matrix": [3, 0], "x": 28, "y": 60 }
         ]
     },
+    "community_layouts": [
+        "ortho_4x4"
+    ],
     "layouts": {
         "LAYOUT_ortho_4x4": {
-            "c_macro": false,
             "layout": [
                 { "matrix": [0, 0], "x": 0, "y": 0 },
                 { "matrix": [0, 1], "x": 1, "y": 0 },
