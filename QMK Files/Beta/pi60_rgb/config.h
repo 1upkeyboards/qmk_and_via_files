@@ -5,26 +5,6 @@
 
 #include "config_common.h"
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 10
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x6F75 // OU
-#define PRODUCT_ID   0x5602
-#define DEVICE_VER   0x0001
-#define MANUFACTURER 1upkeyboards
-#define PRODUCT      pi60_rgb
-
-/* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 14
-
-#define DIODE_DIRECTION COL2ROW
-
-#define MATRIX_ROW_PINS { GP1,  GP2,  GP8,  GP6,  GP0, GP21 }
-#define MATRIX_COL_PINS { GP3,  GP4,  GP5, GP20, GP18, GP13, GP17, GP16, GP15, GP12, GP11, GP14, GP10,  GP9 }
-
-#define NOP_FUDGE 0.4
-
 #define RGB_DI_PIN GP19
 #define DRIVER_LED_TOTAL 61
 #define RGBLED_NUM 61
@@ -82,7 +62,6 @@
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
-#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
