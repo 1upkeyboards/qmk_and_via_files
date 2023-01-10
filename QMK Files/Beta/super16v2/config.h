@@ -18,41 +18,14 @@
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x6F75 // OU
-#define PRODUCT_ID   0x5517
-#define DEVICE_VER   0x0001
-#define MANUFACTURER 1upkeyboards
-#define PRODUCT      super16v2
-
-/* key matrix size */
-#define MATRIX_ROWS 4
-#define MATRIX_COLS 4
-
-//                         0   1   2   3
-#define MATRIX_ROW_PINS { D1, D2, D3, D4 }
-#define MATRIX_COL_PINS { D5, D6, C2, D0 }
-
-#define ENCODERS_PAD_A { B2, B4 }
-#define ENCODERS_PAD_B { B1, B3 }
-#define ENCODER_DIRECTION_FLIP
-
-#define DIODE_DIRECTION COL2ROW
-
-
 #define RGB_DI_PIN B5
-#define DRIVER_LED_TOTAL 20
-#ifdef RGB_DI_PIN
-//#    define RGB_MATRIX_KEYPRESSES // reacts to keypresses
-#    define RGBLIGHT_LIMIT_VAL 255
-#endif
-#ifdef RGB_MATRIX_ENABLE
+#define RGB_MATRIX_LED_COUNT 20
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
+#    define RGB_MATRIX_KEYPRESSES
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
-#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+//#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
 #    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 #    define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 #    define ENABLE_RGB_MATRIX_BREATHING
@@ -80,7 +53,7 @@
 #    define ENABLE_RGB_MATRIX_HUE_WAVE
 #    define ENABLE_RGB_MATRIX_PIXEL_RAIN
 #    define ENABLE_RGB_MATRIX_PIXEL_FLOW
-#    define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
+//#    define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
 //#    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 //#    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
@@ -97,16 +70,9 @@
 //#    define ENABLE_RGB_MATRIX_MULTISPLASH
 //#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 //#    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-#endif
 
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
-
-/* Bootmagic Lite key configuration */
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 0

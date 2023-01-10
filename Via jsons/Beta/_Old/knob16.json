@@ -2,14 +2,6 @@
     "name": "knob16",
     "vendorId": "0x6F75",
     "productId": "0x5520",
-    "lighting": "qmk_rgblight",
-    "keycodes": ["via/keycodes", "via/qmk_lighting"],
-    "menus": [
-      "via/keymap",
-      "via/layouts",
-      "via/macros",
-      "via/save_load"
-    ],
     "matrix": { "rows": 4, "cols": 4},
     "layouts": {
         "labels": [
